@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Tesla Auth Redirect</title>
+</head>
+<body>
+    <h2>Tesla API 인증 응답</h2>
+    <p>인증 코드가 확인되었습니다. 아래 코드를 복사해서 사용하세요.</p>
+    <textarea id="code" style="width:100%; height:100px;" readonly></textarea>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        const error = urlParams.get('error');
+
+        if (code) {
+            document.getElementById('code').value = code;
+        } else if (error) {
+            document.getElementById('code').value = "오류 발생: " + error;
+        } else {
+            document.getElementById('code').value = "인증 코드가 없습니다. 로그인 과정을 다시 진행해 주세요.";
+        }
+    </script>
+</body>
+</html>
