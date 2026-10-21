@@ -1,0 +1,13 @@
+{
+  "name": "oxisols-car",
+  "version": "1.0.0",
+  "description": "Tesla Fleet API Integration on Vercel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}
