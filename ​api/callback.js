@@ -1,4 +1,4 @@
-export default async function handler(req, res) {
+module.exports = async (req, res) => {
   const { code, state, error } = req.query;
 
   if (error) {
@@ -33,7 +33,6 @@ export default async function handler(req, res) {
       });
     }
 
-    // 성공 시 토큰 반환 (실제 운영 시 DB 저장 또는 안전한 자동화 연동 처리)
     return res.status(200).json({
       message: 'Tesla OAuth Authentication Successful!',
       access_token: tokenData.access_token,
@@ -45,4 +44,4 @@ export default async function handler(req, res) {
     console.error('OAuth Error:', err);
     return res.status(500).json({ error: 'Internal Server Error', message: err.message });
   }
-}
+};
