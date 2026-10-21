@@ -1,3 +1,7 @@
 export default function handler(req, res) {
-  res.status(200).json({ message: "테슬라 제어 서버가 정상적으로 작동 중입니다!" });
+  return res.status(200).json({
+    status: 'online',
+    service: 'Tesla Fleet API Bridge',
+    timestamp: new Date().toISOString()
+  });
 }
