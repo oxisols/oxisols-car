@@ -1,9 +1,12 @@
 {
   "name": "oxisols-car",
   "version": "1.0.0",
-  "description": "Tesla Fleet API backend for Tasker",
+  "private": true,
+  "type": "module",
   "engines": {
-    "node": ">=18.x"
+    "node": ">=20"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@upstash/redis": "^1.35.0"
+  }
 }
